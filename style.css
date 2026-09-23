@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #0F172A;
+    min-height: 100vh;
+    /* display: flex;
+    justify-content: center; */
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+
+.logo p{
+    color:  #F8FAFC;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav{
+    display: flex;
+    gap: 28px;
+    margin-right: 75px;
+}
+nav a{
+   text-decoration: none;
+   color: #CBD5E1;
+   font-size: 20px;
+   font-weight: 600;
+}
+
+nav a:hover{
+    color: #38BDF8;
+    cursor: pointer;
+}
+
+#dashboard{
+    padding: 30px;
+}
+#dashboard h2{
+    color: #CBD5E1;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.cards-container{
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+.cards-container > div{
+    background: #1E293B;
+    width: 320px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 24px;
+    color: #CBD5E1;
+}
+.cards-container h3{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.cards-container p{
+    font-size: 42px;
+    color: #F8FAFC;
+    font-weight: 700;
+}
+
+.cards-container span{
+    color: #94A3B8;
+    font-size: 20px;
+}
+.total-tasks{
+    border-left: 4px solid #38BDF8;
+}
+.completed {
+    border-left: 4px solid #34D399;
+}
+.pending{
+    border-left:4px solid #A78BFA;
+}
+.progress{
+    border-left: 4px solid #38BdF8;
+}
+
+#tasks{
+    padding: 30px;
+}
+#tasks h2{
+    color: #CBD5E1;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+#tasks form{
+    background: #1E293B;
+    padding: 24px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#tasks form label{
+    color: #94A3B8;
+    font-weight: 400;
+}
+#tasks form input,
+#tasks form select,
+#tasks form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    background: #1E293B;
+    border: 1px solid #334155;
+}
+#tasks form select {
+    background: #0F172A;
+    color: #F8FAFC;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+}
+#tasks form input::placeholder,
+#tasks form textarea::placeholder {
+    color: #94A3B8;
+}
+#add-task{
+    background: #38BDF8;
+    color: #0F172A;
+    align-self: flex-start;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+}
+#task-list{
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+    width: 100%;
+    display: none;
+}
+#task-list li {
+    background: #1E293B;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #F8FAFC;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#task-list li:hover{
+    color: #334155;
+}
+#task-list li button {
+    margin-left: auto;
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#task-list li button:hover {
+    opacity: 0.8;
+}
+#notes{
+    padding: 30px;
+}
+
+#notes h2{
+    color: #CBD5E1;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#notes form{
+    background: #1E293B;
+    padding: 24px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#notes form input, textarea{
+    padding: 12px;
+    border-radius: 10px;
+    background: #1E293B;
+    border: 1px solid #334155;
+}
+#notes form label{
+    color: #94A3B8;
+    font-weight: 400;
+}
+#add-note{
+    background: #38BDF8;
+    color: #0F172A;
+    align-self: flex-start;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+}
+#notes-list{
+    background: #1E293B;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #F8FAFC;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    display: none;
+}
+#timer{
+    padding: 30px;
+}
+#timer h2{
+    color: #CBD5E1;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.timer-container{
+    background: #1E293B;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+#timer-display{
+    color: #38BDF8;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.timer-container button{
+    background: #38BDF8;
+    margin-top: 10px;
+    color: #0F172A;
+    align-self: flex-start;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    cursor: pointer;
+}
+.timer-box button:hover {
+    background: #7DD3FC;
+}
+#session-complete{
+    color:#CBD5E1;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+footer{
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+}
+#task-list li input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+@media(max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+    .logo{
+        margin: 15px;
+    }
+    .cards-container {
+       flex-wrap: wrap;
+       gap: 15px;
+    }
+     .cards-container > div {
+        width: 160px;
+        height: 120px;
+        padding: 12px;
+    }
+    .cards-container h3 {
+        font-size: 14px;
+    }
+
+    .cards-container p {
+        font-size: 28px;
+    }
+
+    .cards-container span {
+        font-size: 12px;
+    }
+    nav{
+        justify-content: center;
+        margin-right: 0;
+        gap: 15px;
+    }
+    #timer {
+        padding: 20px;
+    }
+
+    .timer-container {
+        padding: 20px;
+    }
+
+    #timer-display{
+        font-size: 45px;
+    }
+
+    .timer-container button {
+        padding: 9px 14px;
+    }
+    #notes {
+        padding: 20px;
+    }
+
+    #notes form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #notes textarea {
+        width: 100%;
+        min-height: 150px;
+        box-sizing: border-box;
+    }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
