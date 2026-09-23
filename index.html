@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="icons8-study-80.png" alt="logo">
+            <p>StudyFlow</p>
+        </div>
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#tasks">Tasks</a>
+            <a href="#notes">Notes</a>
+            <a href="#timer">Timer</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="cards-container">
+                <div class="total-tasks">
+                    <h3>Total Tasks</h3>
+                    <p>0</p>
+                    <span>tasks</span>
+                </div>
+                <div class="completed">
+                    <h3>Completed Tasks</h3>
+                    <p>0</p>
+                    <span>tasks completed</span>
+                </div>
+                <div class="pending">
+                     <h3>Pending Tasks</h3>
+                    <p>0</p>
+                    <span>tasks pending</span>
+                </div>
+                <div class="progress">
+                     <h3>Progress</h3>
+                    <p>0%</p>
+                    <span>overall completion</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="tasks">
+            <h2>Tasks</h2>
+            <form action="">
+                <label for="task-name">Enter Task</label>
+                <input type="text" id="task-name" placeholder="Enter your task name">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Enter subject name">
+
+                <label for="priority">Priority</label>
+                <select id="priority">
+                    <option value="" disabled selected>Select priority</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <button id="add-task">Add Task</button>
+            </form>
+            <ul id="task-list"></ul>
+        </section>
+
+        <section id="notes">
+            <h2>Notes</h2>
+            <form action="">
+                <label for="title">Note title</label>
+                <input type="text" id="title" placeholder="Enter note title">
+
+                <label for="content">Note content</label>
+                <textarea id="content" placeholder="Enter note content"></textarea>
+
+                <button id="add-note">Add Note</button>
+            </form>
+            <div id="notes-list"></div>
+        </section>
+
+        <section id="timer">
+            <h2>Timer</h2>
+            <div class="timer-container">
+                <p id="timer-display">00:00</p>
+                <button id="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="reset">Reset</button>
+                <p id="session-complete">Sessions completed: 0</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>StudyFlow</h3>
+        <p>© 2026 StudyFlow — Stay consistent, keep learning.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
